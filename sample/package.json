@@ -1,0 +1,13 @@
+{
+  "name": "onboardkit-safe-sample",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --test app.test.js"
+  },
+  "dependencies": {
+    "picocolors": "1.1.1"
+  }
+}

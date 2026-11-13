@@ -1,0 +1,35 @@
+{
+  "data": {
+    "category": "snyk-open-source-test",
+    "origin": "REAL ADAPTER",
+    "project": {
+      "status": "PASS",
+      "project": "onboardkit-safe-sample",
+      "version": "1.0.0"
+    },
+    "command": [
+      "snyk",
+      "test",
+      "--json",
+      "--file=package.json"
+    ],
+    "executed": true,
+    "completed": true,
+    "projectHash": "73d057b211c4f343e5235041902450a4cb7c707d7f23bb36ef5fc379a9a82133",
+    "toolVersion": "1.1308.4",
+    "exitCode": 0,
+    "status": "PASS",
+    "reason": "Scan completed; no vulnerabilities reported",
+    "dependencyCount": 1,
+    "packageManager": "npm",
+    "findingCount": 0,
+    "severities": {},
+    "findings": [],
+    "diagnostic": "",
+    "schema": 1,
+    "id": "717189a9-0470-4ac9-ba13-968f9659fa18",
+    "timestamp": "2026-11-13T23:02:53.943Z",
+    "kind": "scan"
+  },
+  "sha256": "4d6c92206cb6be9951090d514c043edb15e9dcdea9b4c1f54a84e1a1c99e2b7a"
+}

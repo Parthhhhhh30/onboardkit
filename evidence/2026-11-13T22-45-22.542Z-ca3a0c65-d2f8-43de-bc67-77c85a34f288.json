@@ -1,0 +1,30 @@
+{
+  "data": {
+    "category": "LOCAL CONFIGURATION EXERCISE — NOT A SECURITY SCAN",
+    "status": "PASS",
+    "command": [
+      "node",
+      "src/manifest-check.js",
+      "<temporary-directory>"
+    ],
+    "failure": {
+      "code": 1,
+      "stdout": "{\"status\":\"FAIL\",\"diagnostic\":\"Missing package.json\",\"next\":\"Restore the sample package.json and run npm ci --prefix sample --ignore-scripts.\"}\n",
+      "stderr": "",
+      "error": null
+    },
+    "cause": "Isolated temporary project has no package.json",
+    "correctiveAction": "Restore a valid manifest from the isolated sample",
+    "rerun": {
+      "code": 0,
+      "stdout": "{\"status\":\"PASS\",\"project\":\"onboardkit-safe-sample\",\"version\":\"1.0.0\"}\n",
+      "stderr": "",
+      "error": null
+    },
+    "schema": 1,
+    "id": "ca3a0c65-d2f8-43de-bc67-77c85a34f288",
+    "timestamp": "2026-11-13T22:45:22.542Z",
+    "kind": "exercise"
+  },
+  "sha256": "03fe7da0a69f3c493431f08b9e181549b0094217b305905860e898fa106ea930"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "onboardkit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Developer Tool Implementation & Verification Workbench",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node src/check.js",
+    "doctor": "node src/cli.js doctor",
+    "scan": "node src/cli.js scan",
+    "verify": "node src/cli.js verify",
+    "report": "node src/cli.js report",
+    "demo": "node src/cli.js demo"
+  },
+  "devDependencies": {
+    "snyk": "1.1308.4"
+  }
+}
