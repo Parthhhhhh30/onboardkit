@@ -1,6 +1,6 @@
 # Five-minute technical demonstration
 
-**0:00–0:40 — Purpose and disclosure.** “ONBOARDKIT is an independent AI-assisted portfolio lab for implementation consulting. It demonstrates setup, configuration validation, troubleshooting, security-tool integration and an evidence-based handover. It is currently partially verified: local tests pass and the historical real sample scan reported zero vulnerabilities; hosted CI remains unverified and remediation was not exercised.” Show README and STATUS.
+**0:00–0:40 — Purpose and disclosure.** “ONBOARDKIT is an independent AI-assisted portfolio lab for implementation consulting. It demonstrates setup, configuration validation, troubleshooting, security-tool integration and an evidence-based handover. It is currently partially verified: local tests pass and the historical real sample scan reported zero vulnerabilities; hosted Local checks passed, while hosted Snyk has not been run and remediation was not exercised.” Show README and STATUS.
 
 **0:40–1:20 — Working sample and preflight.** Run `npm start --prefix sample -- 'Demo onboarding'`, then `npm run doctor`. Show the actual checklist and tool versions. Explain that credential presence is not authentication validation, and local OAuth files are not inspected. An exit 2 identifies action needed.
 
@@ -12,11 +12,11 @@
 
 **3:35–4:25 — Verification and handover.** Run `npm run verify` and `npm run report`. Show per-check statuses, actual evidence, sample fingerprint and Markdown/JSON handover. Explain that hashes detect accidental modifications, not malicious forgery, and partial verification never becomes blanket green.
 
-**4:25–5:00 — CI and next actions.** Show the separate workflows: PR tests have no scanner secrets; the manual security workflow uses the reviewed default branch and protected environment. State that hosted execution has not been verified. Close with the next action: obtain approval for public GitHub publication, push the reviewed files and inspect the real hosted test run. Hosted Snyk scanning additionally needs a secure environment secret.
+**4:25–5:00 — CI and next actions.** Show the separate workflows: PR tests have no scanner secrets; the manual security workflow uses the reviewed default branch and protected environment. Show [the successful hosted Local checks run](https://github.com/Parthhhhhh30/onboardkit/actions/runs/43531269743) and its actual test results. Explain that local verify/report do not fetch hosted Actions state, so their historical hosted field stays NOT VERIFIED. Hosted Snyk remains unrun and needs secure environment configuration and separate service-use approval.
 
 ## Five implementation-consultant interview questions
 1. A customer sees exit code 1 from Snyk. How do you distinguish a successful scan with findings from scanner failure, and communicate the next step?
 2. Doctor detects no token variable, but the customer previously ran `snyk auth`. How do you investigate without requesting or exposing credentials?
 3. How did you reproduce and isolate a configuration defect, and what evidence shows the correction worked?
 4. Why are security scanning and PR testing in separate workflows, and what environment protections would you request before a hosted run?
-5. What does the evidence hash establish, what does it fail to establish, and which claims can you honestly make while real scanning is blocked?
+5. What does the evidence hash establish, what does it fail to establish, and which claims can you honestly make when only a historical sample scan and hosted Local checks have been verified?

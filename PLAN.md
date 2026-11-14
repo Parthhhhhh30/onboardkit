@@ -1,8 +1,8 @@
-# Final release plan
+# Implementation and verification milestones
 
-- Inspect historical scanner evidence, source, tests, dependencies, workflow trust and publication privacy.
-- Correct misleading remediation PASS and stale documentation; add targeted regression coverage only.
-- Run final tests, fresh lockfile installation, configuration and evidence/report consistency checks.
-- Prepare a separate clean local public repository with an exact reviewed file/hash inventory. No remote creation or push.
-- Stop implementation once sufficient evidence is recorded. Await explicit publication approval, owner and repository name before external writes.
-- After publication authorization, push reviewed files, trigger/inspect real hosted Local checks run and report its actual terminal state. Hosted scanner run is separately gated on secure secret configuration.
+- Isolated sample, CLI, tests and failure exercise implemented and reviewed.
+- Real local Snyk sample scan recorded; limitations retained in EVIDENCE.md.
+- Reviewed 28-file release published at commit `2e3a91fd4bf4bf8be92271ebb52e9adb03de67e1`.
+- Hosted Local checks verified through [run 43531269743](https://github.com/Parthhhhhh30/onboardkit/actions/runs/43531269743).
+- Current documentation reconciles that hosted result while dated release audits, original scan events and the historical handover remain unchanged.
+- Hosted Snyk has not been performed; remediation has not been verified. No new development is planned.

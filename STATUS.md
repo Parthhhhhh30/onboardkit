@@ -1,14 +1,13 @@
-# Status — PARTIALLY VERIFIED
+# Verification status
 
-Final release audit: 13 November 2026 (UTC).
+Updated 14 November 2026 (UTC).
 
-- Existing real sample scan: PASS, Snyk 1.1308.4, executed/completed true, exit 0, one npm dependency, zero reported vulnerabilities; timestamp 2026-11-13T23:02:53.943Z.
-- The recorded sample fingerprint matches current sample app, manifest and lockfile. Scanner process invocation, cwd and manifest selection were inspected. Installed binary matches its packaged checksum. Historical stdout provenance is not cryptographically established; raw stdout was not retained.
-- Vulnerability remediation: NOT VERIFIED. No vulnerabilities were reported, and no remediation was required or performed.
-- Local tests: 27 workbench and 2 sample tests passed; syntax and clean installation passed. See final release audit and current handover.
-- Controlled configuration failure and evidence integrity: PASS.
-- Hosted GitHub Actions: NOT VERIFIED. No remote repository, push or hosted workflow run is authorized by the release-audit request.
-- Publication preparation: separate clean local repository and exact file/hash inventory prepared; dependencies, caches, auth/config files, local history and generated JSON reports excluded. Only reviewed scan/exercise records are public candidates.
-- Suitable for an honest independent AI-assisted implementation portfolio description. No production, remediation, hosted-CI or signed-attestation claim is justified.
+- **Hosted Local checks: VERIFIED.** [Run 43531269743](https://github.com/Parthhhhhh30/onboardkit/actions/runs/43531269743) completed successfully for commit `2e3a91fd4bf4bf8be92271ebb52e9adb03de67e1`. Installation, syntax, 27 workbench tests, 2 sample tests and the controlled failure exercise passed.
+- **Historical local Snyk scan: RECORDED.** The 13 November 2026 scan reports Snyk 1.1308.4, execution/completion true, exit 0, one npm dependency and zero findings. The sample fingerprint matches the reviewed release. Raw stdout and a signed attestation were not retained; see [evidence provenance](EVIDENCE.md).
+- **Hosted Snyk scan: NOT PERFORMED.** The optional manual security workflow has not been run.
+- **Vulnerability remediation: NOT VERIFIED.** No vulnerabilities were reported and no remediation was required or performed.
+- Controlled configuration failure and recorded evidence integrity: PASS.
 
-Approval required next: create a public GitHub repository with the agreed owner/name and push the reviewed snapshot. Then run the secret-free Local checks workflow and inspect actual completed logs. Optional hosted Snyk scanning requires manually configuring the protected snyk-security environment and SNYK_TOKEN secret; never send tokens in chat.
+The project is published at [Parthhhhhh30/onboardkit](https://github.com/Parthhhhhh30/onboardkit). It is an independent AI-assisted portfolio sample, with no actual customer implementation or production-security claim.
+
+Dated release audits and the committed handover preserve the state observed before publication. The CLI's local report does not query hosted Actions and therefore retains its own NOT VERIFIED hosted field; use the actual linked run for hosted execution evidence. Documentation updates do not change historical scan events.
